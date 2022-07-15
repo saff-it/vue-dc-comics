@@ -51,7 +51,6 @@ section.ms_main-sect {
 section.ms_bottom-main{
     background-color: $brandColor;
     
-
     div.ms_bottom-main-bar {
         height: 120px;
         @include flex-hor-center;

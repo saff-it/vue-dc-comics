@@ -36,9 +36,9 @@ export default {
 
 
 nav{
-    display: flex;
+    @include flex-hor-center;
     justify-content: space-between;
-    align-items: center;
+    
 
     div.img-cont{
     height: 90px;
