@@ -12,11 +12,11 @@
         <section class="container-fluid ms_bottom-main">
             <div class="container ms_bottom-main-bar">
                 <ul>
-                    <li>Digital Comics</li>
-                    <li>Dc Merchandise</li>
-                    <li>Subscription</li>
-                    <li>Comic Shop Locator</li>
-                    <li>Dc power Visa</li>
+                    <li> <img src="../assets/img/buy-comics-digital-comics.png" alt="digital comics icon"> Digital Comics</li>
+                    <li> <img src="../assets/img/buy-comics-merchandise.png" alt="digital comics icon"> Dc Merchandise</li>
+                    <li> <img src="../assets/img/buy-comics-subscriptions.png" alt="digital comics icon"> Subscription</li>
+                    <li> <img src="../assets/img/buy-comics-shop-locator.png" alt="digital comics icon"> Comic Shop Locator</li>
+                    <li> <img src="../assets/img/buy-dc-power-visa.svg" alt="digital comics icon"> Dc power Visa</li>
                 </ul>
             </div>
         </section>
@@ -65,6 +65,12 @@ section.ms_bottom-main{
                 margin: 0 15px;
                 color: white;
                 text-align: center;
+
+                img{
+                    height: 40px;
+                    margin-right: 10px;
+
+                }
             }
         }
     }
