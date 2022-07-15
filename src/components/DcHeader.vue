@@ -50,8 +50,10 @@ div.nav-bar ul{
 
     li {
         display: inline-block;
-        margin: 0 15px;
+        margin: 0 14px;
+        font-size: 12px;
         font-weight: bold;
+        text-transform: uppercase;
     }
 }
 
