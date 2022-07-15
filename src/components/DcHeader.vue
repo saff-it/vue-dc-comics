@@ -32,6 +32,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../styles/mixins.scss";
+
 
 nav{
     display: flex;
@@ -49,11 +51,8 @@ div.nav-bar ul{
     list-style: none;
 
     li {
-        display: inline-block;
+        @include hor-list-setup;
         margin: 0 14px;
-        font-size: 12px;
-        font-weight: bold;
-        text-transform: uppercase;
     }
 }
 
