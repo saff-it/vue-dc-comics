@@ -24,9 +24,8 @@ export default {
 <style lang="scss">
 @import "~bootstrap/scss/bootstrap.scss";
 
-#app {
-  
-}
+@import ".styles/variables.scss";
+@import ".styles/mixins.scss";
 
 
 </style>
