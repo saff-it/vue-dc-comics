@@ -58,6 +58,7 @@ section.ms_bottom-main{
         ul{
             list-style: none;
             width: 100%;
+            margin: 0;
 
             li{
                 @include hor-list-setup;

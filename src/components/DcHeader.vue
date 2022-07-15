@@ -49,6 +49,7 @@ nav{
 
 div.nav-bar ul{
     list-style: none;
+    margin: 0;
 
     li {
         @include hor-list-setup;

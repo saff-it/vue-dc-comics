@@ -31,7 +31,7 @@
 
                     <ul>
                         <li>Characters</li>
-                        <li>Characters</li>
+                        <li>Privacy policy (new)</li>
                         <li>Characters</li>
                         <li>Characters</li>
                         <li>Characters</li>
@@ -107,6 +107,8 @@ section.ms_top-footer{
     }
 }
 
+
+
 div.ms_footer-list-menu{
     display: flex;
     width: 40%;
@@ -117,10 +119,16 @@ div.ms_footer-list-menu{
 
 }
 
+div.footer-logo img{
+    
+
+}
+
 
 h4{
     color: white;  
     text-transform: uppercase;
+    font-size: 1.2rem;
 
 }
 
@@ -139,6 +147,8 @@ section.ms_bottom-footer{
     height: 100px;
     background-color: $footerColor;
     @include flex-hor-center;
+    
+
 
 }
 
