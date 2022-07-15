@@ -1,8 +1,9 @@
 <template>
   <header>
+    <h1 class="fw-bold">ciao</h1>
+    <h1>ciao</h1>
 
 
-    
   </header>
 </template>
 
@@ -12,6 +13,6 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 
 </style>
