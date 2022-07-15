@@ -39,8 +39,7 @@ section.ms_main-sect {
     background-color: $bgColor;
 
     div.ms_main-contents {
-        display: flex;
-        align-items: center;
+        @include flex-hor-center;
         height: 110px;
         color: white;
         font-size: 25px;
@@ -49,15 +48,27 @@ section.ms_main-sect {
 
 }
 
-div.ms_bottom-main-bar ul{
-    list-style: none;
+section.ms_bottom-main{
+    background-color: $brandColor;
+    
 
-        li{
-            @include hor-list-setup;
-            margin: 0 14px;
+    div.ms_bottom-main-bar {
+        height: 120px;
+        @include flex-hor-center;
+
+        ul{
+            list-style: none;
+            width: 100%;
+
+            li{
+                @include hor-list-setup;
+                width: calc(100% / 5 - 30px);
+                margin: 0 15px;
+                color: white;
+                text-align: center;
+            }
         }
-
+    }
 }
-
 
 </style>

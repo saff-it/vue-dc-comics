@@ -4,3 +4,8 @@
     font-weight: bold;
     text-transform: uppercase;
 }
+
+@mixin flex-hor-center{
+    display: flex;
+    align-items: center;
+}
