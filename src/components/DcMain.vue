@@ -10,13 +10,13 @@
         </section>
 
         <section class="container-fluid ms_bottom-main">
-            <div class="container ms_bottom-main-bar">
+            <div class="container ms_bottom-main-bar"
+                v-for="(product, index) in products"
+                :key="index"
+            >
                 <ul>
-                    <li> <img src="../assets/img/buy-comics-digital-comics.png" alt="digital comics icon"> Digital Comics</li>
-                    <li> <img src="../assets/img/buy-comics-merchandise.png" alt="digital comics icon"> Dc Merchandise</li>
-                    <li> <img src="../assets/img/buy-comics-subscriptions.png" alt="digital comics icon"> Subscription</li>
-                    <li> <img src="../assets/img/buy-comics-shop-locator.png" alt="digital comics icon"> Comic Shop Locator</li>
-                    <li> <img src="../assets/img/buy-dc-power-visa.svg" alt="digital comics icon"> Dc power Visa</li>
+                    <li>
+                    <img :src="require(`..assets/img/buy-${product.img}`)" :alt="product.text"> {{product.text}}</li>
                 </ul>
             </div>
         </section>
@@ -26,7 +26,28 @@
 
 <script>
 export default {
-
+    data: function(){
+        return {
+            products: [
+                {
+                    text: 'digital comics',
+                    img: 'comics-digital-comics.png',
+                },{
+                    text: 'dc merchandise',
+                    img: 'comics-merchandise.png',
+                },{
+                    text: 'subscription',
+                    img: 'comics-subscriptions.png',
+                },{
+                    text: 'comic shop locator',
+                    img: 'comics-shop-locator.png',
+                },{
+                    text: 'dc power visa',
+                    img: 'dc-power-visa.svg',
+                },
+            ],
+        };
+    },
 }
 </script>
 
@@ -59,6 +80,7 @@ section.ms_bottom-main{
             list-style: none;
             width: 100%;
             margin: 0;
+            padding: 0;
 
             li{
                 @include hor-list-setup;

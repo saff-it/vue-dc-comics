@@ -6,18 +6,13 @@
         </div>
 
         <div class="nav-bar">
+
             <ul>
-                <li>Characters</li>
-                <li>Comics</li>
-                <li>Movies</li>
-                <li>TV</li>
-                <li>Games</li>
-                <li>Collectibles</li>
-                <li>Videos</li>
-                <li>Fans</li>
-                <li>News</li>
-                <li>Shop</li>
+                <li  v-for="(link, index) in headerNavLinks" :key="index">
+                    <a class="ms_nav-link" href="link.url">{{link.text}}</a>
+                </li>                
             </ul>
+
         </div>
     </nav>
 
@@ -27,6 +22,44 @@
 
 <script>
 export default {
+    data: function(){
+        return {
+            headerNavLinks: [
+                {
+                    text: 'characters',
+                    url: '#',
+                },{
+                    text: 'comics',
+                    url: '#',
+                },{
+                    text: 'movies',
+                    url: '#',
+                },{
+                    text: 'tv',
+                    url: '#',
+                },{
+                    text: 'games',
+                    url: '#',
+                },{
+                    text: 'collectibles',
+                    url: '#',
+                },{
+                    text: 'video',
+                    url: '#',
+                },{
+                    text: 'fans',
+                    url: '#',
+                },{
+                    text: 'news',
+                    url: '#',
+                },{
+                    text: 'shop',
+                    url: '#',
+                },
+            ],
+        };
+    },
+    
 
 }
 </script>
@@ -50,11 +83,19 @@ nav{
 div.nav-bar ul{
     list-style: none;
     margin: 0;
+    
 
     li {
         @include hor-list-setup;
         margin: 0 14px;
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
     }
+
+
 }
 
 
