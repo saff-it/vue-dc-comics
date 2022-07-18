@@ -16,12 +16,31 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+
+div.ms_card-img{
+    height: 50%;
+
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+}
 
 div.ms_dc-card {
     width: calc(100% / 6);
+    
 
+    h5{
+        color: white;
+        text-transform: uppercase;
+        margin: 20px 0;
+        font-size: 0.9rem;
+        width: 80%;
 
+    }
 }
 
 
