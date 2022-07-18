@@ -1,6 +1,8 @@
 <template>
     <main>
 
+        <section class="ms_jumpo-img"></section>
+
         <section class="container-fluid ms_main-sect">
 
             <div class="container ms_main-contents">
@@ -201,4 +203,9 @@ section.ms_bottom-main{
         
 }
 
+section.ms_jumpo-img{
+    height: 450px;
+    background-image: url('../assets/img/jumbotron.jpg');
+    background-size: cover;
+}
 </style>
