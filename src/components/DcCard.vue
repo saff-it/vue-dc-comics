@@ -14,18 +14,19 @@
 export default {
     props: ['singleCard'],
 }
+
 </script>
 
 <style lang="scss">
 
 div.ms_card-img{
-    height: 50%;
-
+   
     img{
-        height: 100%;
+        height: 200px;
         width: 100%;
         object-fit: cover;
         object-position: top;
+        padding: 12px;
     }
 }
 
@@ -36,7 +37,7 @@ div.ms_dc-card {
     h5{
         color: white;
         text-transform: uppercase;
-        margin: 20px 0;
+        margin-top: 20px;
         font-size: 0.9rem;
         width: 80%;
 
