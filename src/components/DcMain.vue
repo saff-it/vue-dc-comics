@@ -3,7 +3,7 @@
 
         <section class="container-fluid ms_main-sect">
 
-            <div id="comicCards" class="container ms_main-contents">
+            <div class="container ms_main-contents">
                 <DcCard v-for="(card, index) in comicCards"
                 :key="index"
                     :singleCard="card"
@@ -39,7 +39,7 @@ import DcCard from './DcCard.vue';
 
 export default {
 
-    name: 'comicCards',
+    name: 'DcMain',
     components:{
         DcCard,
     },
@@ -158,22 +158,6 @@ section.ms_main-sect {
         flex-wrap: wrap;
         padding: 40px 0;
         
-        div.ms_dc-card{
-            width: calc(100% / 6);
-            
-    
-
-            div.ms_card-img{
-               
-
-                img{
-            
-                
-                }
-            }
-            
-        }
-
     }
 
 }
