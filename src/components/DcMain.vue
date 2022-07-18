@@ -10,15 +10,21 @@
         </section>
 
         <section class="container-fluid ms_bottom-main">
-            <div class="container ms_bottom-main-bar"
-                v-for="(product, index) in products"
-                :key="index"
-            >
-                <ul>
-                    <li>
-                    <img :src="require(`..assets/img/buy-${product.img}`)" :alt="product.text"> {{product.text}}</li>
-                </ul>
+            
+            <div class="container">
+                <div class="ms_bottom-main-bar"
+                    v-for="(product, index) in products"
+                    :key="index"
+                >
+                    <div>
+                        <img :src="require(`../assets/img/buy-${product.img}`)" :alt="product.text">
+                        
+                    </div>
+                    <h3> {{product.text}} </h3>
+                                
+                </div>
             </div>
+            
         </section>
 
     </main>
@@ -72,31 +78,40 @@ section.ms_main-sect {
 section.ms_bottom-main{
     background-color: $brandColor;
     
-    div.ms_bottom-main-bar {
-        height: 120px;
-        @include flex-hor-center;
+    
+    div.container{
+        display: flex;
 
-        ul{
-            list-style: none;
-            width: 100%;
-            margin: 0;
-            padding: 0;
 
-            li{
-                @include hor-list-setup;
-                width: calc(100% / 5 - 30px);
-                margin: 0 15px;
+       div.ms_bottom-main-bar {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: calc(100% / 5);
+            
+            
+
+            div{
                 color: white;
                 text-align: center;
+                margin: 0 15px;
 
                 img{
-                    height: 40px;
+                    height: 45px;
                     margin-right: 10px;
-
                 }
             }
-        }
+
+            h3{
+                color: white;
+                font-size: 14px;
+                text-transform: uppercase;
+            }
+            
+        } 
     }
+        
 }
 
 </style>
