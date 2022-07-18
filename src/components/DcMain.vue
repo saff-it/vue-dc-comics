@@ -3,9 +3,10 @@
 
         <section class="container-fluid ms_main-sect">
 
-            <div class="container ms_main-contents">
-                <DcCard v-for="(Card, index) in Cards" :key="index"
-                :singleCard="card"
+            <div id="comicCards" class="container ms_main-contents">
+                <DcCard v-for="(card, index) in comicCards"
+                :key="index"
+                    :singleCard="card"
                 />
                 
             </div>
@@ -38,7 +39,7 @@ import DcCard from './DcCard.vue';
 
 export default {
 
-    name: 'Cards',
+    name: 'comicCards',
     components:{
         DcCard,
     },
