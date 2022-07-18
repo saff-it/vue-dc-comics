@@ -4,49 +4,10 @@
         <section class="container-fluid ms_main-sect">
 
             <div class="container ms_main-contents">
-
-                <div class="ms_dc-card">
-                    <div class="ms_card-img">
-                        <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-                    </div>
-                    <h5 >ACTION COMICS</h5>
-                </div>
-
-                <div class="ms_dc-card">
-                    <div class="ms_card-img">
-                        <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-                    </div>
-                    <h5 >ACTION COMICS</h5>
-                </div>
-
-                <div class="ms_dc-card">
-                    <div class="ms_card-img">
-                        <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-                    </div>
-                    <h5 >ACTION COMICS</h5>
-                </div>
-
-                <div class="ms_dc-card">
-                    <div class="ms_card-img">
-                        <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-                    </div>
-                    <h5 >ACTION COMICS</h5>
-                </div>
-
-                <div class="ms_dc-card">
-                    <div class="ms_card-img">
-                        <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-                    </div>
-                    <h5 >ACTION COMICS</h5>
-                </div>
-                <div class="ms_dc-card">
-                    <div class="ms_card-img">
-                        <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-                    </div>
-                    <h5 >ACTION COMICS</h5>
-                </div>
-
-
+                <DcCard v-for="(Card, index) in Cards" :key="index"
+                :singleCard="card"
+                />
+                
             </div>
 
         </section>
@@ -73,11 +34,19 @@
 </template>
 
 <script>
+import DcCard from './DcCard.vue';
+
 export default {
+
+    name: 'Cards',
+    components:{
+        DcCard,
+    },
+    
     data: function(){
         return {
 
-            comics: [
+            comicCards: [
                 {
                     "thumb": "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX",
                     "price": "$19.99",
@@ -186,9 +155,11 @@ section.ms_main-sect {
     div.ms_main-contents {
         display: flex;
         flex-wrap: wrap;
+        padding: 40px 0;
         
         div.ms_dc-card{
             width: calc(100% / 6);
+            
     
 
             div.ms_card-img{
